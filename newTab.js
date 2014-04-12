@@ -1,3 +1,3 @@
 $(function() {
-    tumblrTile.draw();
+    dropboxTile.draw();
 });

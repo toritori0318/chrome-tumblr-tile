@@ -1,14 +1,14 @@
 {
-    "name": "tumblr-tile",
+    "name": "dropbox-tile",
     "version": "0.1",
-    "description": "tumblr-tile",
+    "description": "dropbox-tile",
     "chrome_url_overrides": {
         "newtab": "newTab.html"
     },
     "permissions": [
-        "https://api.tumblr.com/"
+        "https://api.dropbox.com/"
     ],
     "options_page": "options.html",
     "manifest_version": 2,
-    "content_security_policy": "script-src 'self' https://api.tumblr.com; object-src 'self'"
+    "content_security_policy": "script-src 'self' https://api.dropbox.com; object-src 'self'"
 }

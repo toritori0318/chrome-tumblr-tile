@@ -2,21 +2,22 @@
 <html>
   <head>
     <script type="text/javascript" src="jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="tumblr-tile.js"></script>
+    <script type="text/javascript" src="dropbox-tile.js"></script>
     <script type="text/javascript" src="options.js"></script>
   </head>
   <body>
-    <h1>tumblr tile options</h1>
+    <h1>dropbox tile options</h1>
     <form id="setting">
-      <label>apikey</label>
-      <input type="text" name="apiKey" />
-      <label>hostname</label>
-      <input type="text" name="hostname" />
-      <label>base width</label>
-      <input type="text" name="baseWidth" />
-      <label>margin</label>
-      <input type="text" name="margin" />
-      <input type="submit" value="save" />
+      <p><label>appKey</label><input type="text" name="appKey" /></p>
+      <p><label>appSecret</label><input type="text" name="appSecret" /></p>
+      <p><label>accessToken</label><input type="text" name="accessToken" /></p>
+      <p><label>accessSecret</label><input type="text" name="accessSecret" /></p>
+      <p><label>mode</label><input type="text" name="mode" value="sandbox"/></p>
+      <p><label>rootDirectory</label><input type="text" name="rootDirectory" value="/" /></p>
+      <p><label>thumbnailSize(xs/s/m/l/xl)</label><input type="text" name="thumbnailSize" value="l" /></p>
+      <p><label>base width</label><input type="text" name="baseWidth" /></p>
+      <p><label>margin</label><input type="text" name="margin" /></p>
+      <p><input type="submit" value="save" /></p>
   </form>
   </body>
 </html>

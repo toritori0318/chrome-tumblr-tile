@@ -1,26 +1,41 @@
 $(function() {
 
-    tumblrTile.loadConfig();
+    dropboxTile.loadConfig();
 
-    var $apiKey    = $('#setting input[name="apiKey"]');
-    var $hostname  = $('#setting input[name="hostname"]');
-    var $baseWidth = $('#setting input[name="baseWidth"]');
-    var $margin    = $('#setting input[name="margin"]');
+    var $appKey         = $('#setting input[name="appKey"]');
+    var $appSecret      = $('#setting input[name="appSecret"]');
+    var $accessToken    = $('#setting input[name="accessToken"]');
+    var $accessSecret   = $('#setting input[name="accessSecret"]');
+    var $mode           = $('#setting input[name="mode"]');
+    var $rootDirectory  = $('#setting input[name="rootDirectory"]');
+    var $thumbnailSize  = $('#setting input[name="thumbnailSize"]');
+    var $baseWidth      = $('#setting input[name="baseWidth"]');
+    var $margin         = $('#setting input[name="margin"]');
 
-    $apiKey.val(tumblrTile.config.apiKey);
-    $hostname.val(tumblrTile.config.hostname);
-    $baseWidth.val(tumblrTile.config.baseWidth);
-    $margin.val(tumblrTile.config.margin);
+    $appKey.val(dropboxTile.config.appKey);
+    $appSecret.val(dropboxTile.config.appSecret);
+    $accessToken.val(dropboxTile.config.accessToken);
+    $accessSecret.val(dropboxTile.config.accessSecret);
+    $mode.val(dropboxTile.config.mode);
+    $rootDirectory.val(dropboxTile.config.rootDirectory);
+    $thumbnailSize.val(dropboxTile.config.thumbnailSize);
+    $baseWidth.val(dropboxTile.config.baseWidth);
+    $margin.val(dropboxTile.config.margin);
 
     $("#setting").submit(function() {
         var hash = {
-            apiKey   : $apiKey.val(),
-            hostname : $hostname.val(),
-            baseWidth: parseInt($baseWidth.val()),
-            margin   : parseInt($margin.val())
+            appKey         : $appKey.val(),
+            appSecret      : $appSecret.val(),
+            accessToken    : $accessToken.val(),
+            accessSecret   : $accessSecret.val(),
+            mode           : $mode.val(),
+            rootDirectory  : $rootDirectory.val(),
+            thumbnailSize  : $thumbnailSize.val(),
+            baseWidth      : parseInt($baseWidth.val()),
+            margin         : parseInt($margin.val())
         };
 
-        tumblrTile.saveConfig(hash);
+        dropboxTile.saveConfig(hash);
         return false;
     });
 });
